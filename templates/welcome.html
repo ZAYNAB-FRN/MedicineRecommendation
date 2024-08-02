@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Recommendation</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="main">
+        <section class="recommendation">
+            <div class="container">
+                <div class="recommendation-content">
+                    <h2 class="form-title">Get Medicine Recommendations</h2>
+                    <form method="POST" class="recommend-form" id="recommend-form">
+                        <div class="form-group">
+                            <label for="disease"><i class="zmdi zmdi-health"></i></label>
+                            <input type="text" name="disease" id="disease" placeholder="Enter Disease" required/>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="recommend" id="recommend" class="form-submit" value="Recommend"/>
+                        </div>
+                    </form>
+                    {% if medicines %}
+                    <div class="medicines-list">
+                        <h3>Recommended Medicines</h3>
+                        <ul>
+                            {% for medicine in medicines %}
+                            <li>
+                                <h4>{{ medicine['Medicine Name'] }}</h4>
+                                <p>Uses: {{ medicine['Uses'] }}</p>
+                                <p>Side Effects: {{ medicine['Side_effects'] }}</p>
+                                <p>Manufacturer: {{ medicine['Manufacturer'] }}</p>
+                                <p>Review: Excellent {{ medicine['Excellent Review %'] }}%, Average {{ medicine['Average Review %'] }}%, Poor {{ medicine['Poor Review %'] }}%</p>
+                                <img src="{{ medicine['Image URL'] }}" alt="{{ medicine['Medicine Name'] }}">
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
