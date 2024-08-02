@@ -1,10 +1,9 @@
 ## Project Structure
 MedicineRecommendation/
-│
-├── app.py
-├── data/
+├── app.py'''
+├── data/'''
 │ └── medicines.csv
-├── static/
+├── static/'''
 │ ├── css/
 │ │ ├── style.css
 │ │ ├── ss.css
@@ -29,15 +28,15 @@ MedicineRecommendation/
 │ ├── img3.jpg
 │ └── img4.jpg
 │
-├── model/
+├── model/'''
 │ └── model_colab.ipynb
 │
-├── templates/
+├── templates/'''
 │ ├── index.html
 │ ├── login_custom.html
 │ ├── register_custom.html
 │ ├── recommendation.html
 │ └── contact.html
 │
-├── README.md
-└── requirements.txt
+├── README.md'''
+└── requirements.txt'''
